@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Beginning HTML and CSS - Responsive Design</title>
+
+		<meta name="description" content="This is a brief responsive design supplement to a core HTML/CSS class. It's designed to give a gentle introduction to the mechanics of responsive design and some contextual information for further learning.">
+		<meta name="author" content="Jen Myers">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src = "images/gdi_logo_badge.png">
+          <h3>Beginning HTML and CSS - Responsive Design</h3>
+          <h4>Class 5</h4>
+        </section>
+        
+        <!-- Welcome-->
+        <section>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+        
+        <!-- What is Responsive Design?-->
+        <section>
+          <h3>What is Responsive Design?</h3>
+          <p>"Responsive web design is a web design approach aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from desktop computer monitors to mobile phones)."</p>
+        </section>
+        
+        <!-- Examples of RWD -->
+        <section>
+          <h3>Examples of RWD</h3>
+          <ul>
+            <li class = "fragment">bostonglobe.com</li>
+            <li class = "fragment">css-tricks.com</li>
+            <li class = "fragment">envylabs.com</li>
+            <li class = "fragment">trentwalton.com</li>
+            <li class = "fragment">happycog.com</li>
+            <li class = "fragment">alistapart.com</li>
+            <li class = "fragment">microsoft.com</li>
+          </ul>
+        </section>
+        
+        <!-- Elements -->
+        <section>
+         <h3>3 Elements of RWD</h3>
+         <ol>
+           <li>Fluid grid</li>
+           <li>Flexible media</li>
+           <li>Media queries</li>
+         </ol>
+        </section>
+        
+        <!-- Fluid grid -->
+        <section>
+          <h3>Fluid Grid</h3>
+          <ul>
+            <li>Define container widths as %, not px.</li>
+            <li>This percentage will represent the width of the containing element, which means it will reflow according to viewport widths.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <p><strong>Target / Context = Result</strong></p>
+          <ul>
+            <li><strong>Target</strong>: The div that you are trying to find the percentage of.</li>
+            <li><strong>Context</strong>: The div that the target is contained by (the parent).</li>
+            <li><strong>Result</strong>: The width as a percentage (yay!)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid01.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid02.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid03.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <p>640px ÷ 960px = .666666667</p>
+          <p>.6666667 = 66.6667%</p>
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid04.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid05.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <img src="images/fluidgrid06.png" />
+        </section>
+
+        <section>
+          <h3>Fluid Grid</h3>
+          <p>200px ÷ 640px = .3125</p>
+        </section>
+
+        <!-- Let's develop it-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Let's create a fluid layout with a container, a header, a content section, a sidebar and a footer.</p>
+        </section>
+
+        <section>
+          <h3>Flexible Media</h3>
+          <ul>
+            <li>Media = Images, Videos, Objects</li>
+            <li>Like the grid, percentages make images flexible.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Flexible Media</h3>
+          <img src="images/flexiblemedia01.png" />
+        </section>
+
+        <section>
+          <h3>Flexible Media</h3>
+          <pre><code class ="html">&lt;img src="http://placekitten.com/700/200" alt="kitten"></code></pre>
+        </section>
+
+        <section>
+          <h3>Flexible Media</h3>
+          <pre><code class ="html">&lt;img src="http://placekitten.com/700/200" alt="kitten" class="cat"></code></pre>
+          <pre><code class ="css">
+            .cat {
+              float: left;
+              width: 50%;
+            }
+          </code></pre>
+        </section>
+
+        <!-- Let's develop it -->
+        <section>
+        	<h3>Let's Develop It</h3>
+        	<p>Using percentage widths &amp; flexible images, add 3 equally wide cat photos to your page:</p>
+        </section>
+        
+        <!-- Media queries -->
+        <section>
+          <h3>Media Queries</h3>
+            <p>Media Queries apply CSS to specific parameters (usually width, but can also be resolution, device size, height).</p>
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+            <pre><code class ="css">
+              @media only screen and (min-width: 600px) {
+                property: value;
+              }
+            </code></pre>
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+            <img src="images/mediaqueries01.png" />
+            <p>http://css-tricks.com/snippets/css/media-queries-for-standard-devices/</p>
+        </section>
+
+        <section>
+          <h3>Media Queries</h3>
+            <p>What to target with media queries:</p>
+            <ul>
+              <li>Floats</li>
+              <li>Font sizes</li>
+              <li>Hovers</li>
+              <li>Navigational Elements</li>
+              <li>Click/Tap Targets</li>
+              <li>Display/Hide content</li>
+              <li>Everything!</li>
+            </ul>
+        </section>
+
+        <!-- Let's develop it -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Remove all width and float properties to create a very simple mobile site. Resize your browser window and decide where media queries should go.</p>
+        </section>
+
+       <!-- Questions -->
+        <section>
+          <h2>Questions?</h2>
+          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+            <div class ="clear"></div></div>
+        </section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          HTML/CSS ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
